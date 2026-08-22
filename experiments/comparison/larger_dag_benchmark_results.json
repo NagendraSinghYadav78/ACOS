@@ -1,0 +1,14 @@
+{
+  "n_nodes": 50,
+  "acos": {
+    "n_nodes": 50,
+    "n_waves": 5,
+    "mean_ms": 0.5718,
+    "stdev_ms": 0.2219
+  },
+  "langgraph": {
+    "n_nodes": 50,
+    "mean_ms": 14.0658,
+    "stdev_ms": 4.1398
+  }
+}

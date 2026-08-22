@@ -1,0 +1,394 @@
+{
+  "n_seeds": 10,
+  "levels": [
+    0.25,
+    0.35,
+    0.45,
+    0.6,
+    0.8
+  ],
+  "per_seed": {
+    "1": {
+      "25pct": {
+        "max_price_change_pct": 0.25,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 18
+      },
+      "35pct": {
+        "max_price_change_pct": 0.35,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 18
+      },
+      "45pct": {
+        "max_price_change_pct": 0.45,
+        "naive_extreme_would_ship": 15,
+        "acos_full_n_rejected": 15,
+        "acos_full_n_escalated": 3
+      },
+      "60pct": {
+        "max_price_change_pct": 0.6,
+        "naive_extreme_would_ship": 15,
+        "acos_full_n_rejected": 15,
+        "acos_full_n_escalated": 7
+      },
+      "80pct": {
+        "max_price_change_pct": 0.8,
+        "naive_extreme_would_ship": 15,
+        "acos_full_n_rejected": 15,
+        "acos_full_n_escalated": 7
+      }
+    },
+    "2": {
+      "25pct": {
+        "max_price_change_pct": 0.25,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 18
+      },
+      "35pct": {
+        "max_price_change_pct": 0.35,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 18
+      },
+      "45pct": {
+        "max_price_change_pct": 0.45,
+        "naive_extreme_would_ship": 14,
+        "acos_full_n_rejected": 14,
+        "acos_full_n_escalated": 4
+      },
+      "60pct": {
+        "max_price_change_pct": 0.6,
+        "naive_extreme_would_ship": 14,
+        "acos_full_n_rejected": 14,
+        "acos_full_n_escalated": 8
+      },
+      "80pct": {
+        "max_price_change_pct": 0.8,
+        "naive_extreme_would_ship": 14,
+        "acos_full_n_rejected": 14,
+        "acos_full_n_escalated": 8
+      }
+    },
+    "3": {
+      "25pct": {
+        "max_price_change_pct": 0.25,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 17
+      },
+      "35pct": {
+        "max_price_change_pct": 0.35,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 17
+      },
+      "45pct": {
+        "max_price_change_pct": 0.45,
+        "naive_extreme_would_ship": 14,
+        "acos_full_n_rejected": 14,
+        "acos_full_n_escalated": 3
+      },
+      "60pct": {
+        "max_price_change_pct": 0.6,
+        "naive_extreme_would_ship": 14,
+        "acos_full_n_rejected": 14,
+        "acos_full_n_escalated": 8
+      },
+      "80pct": {
+        "max_price_change_pct": 0.8,
+        "naive_extreme_would_ship": 14,
+        "acos_full_n_rejected": 14,
+        "acos_full_n_escalated": 8
+      }
+    },
+    "4": {
+      "25pct": {
+        "max_price_change_pct": 0.25,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 17
+      },
+      "35pct": {
+        "max_price_change_pct": 0.35,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 17
+      },
+      "45pct": {
+        "max_price_change_pct": 0.45,
+        "naive_extreme_would_ship": 14,
+        "acos_full_n_rejected": 14,
+        "acos_full_n_escalated": 3
+      },
+      "60pct": {
+        "max_price_change_pct": 0.6,
+        "naive_extreme_would_ship": 14,
+        "acos_full_n_rejected": 14,
+        "acos_full_n_escalated": 7
+      },
+      "80pct": {
+        "max_price_change_pct": 0.8,
+        "naive_extreme_would_ship": 14,
+        "acos_full_n_rejected": 14,
+        "acos_full_n_escalated": 7
+      }
+    },
+    "5": {
+      "25pct": {
+        "max_price_change_pct": 0.25,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 13
+      },
+      "35pct": {
+        "max_price_change_pct": 0.35,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 13
+      },
+      "45pct": {
+        "max_price_change_pct": 0.45,
+        "naive_extreme_would_ship": 11,
+        "acos_full_n_rejected": 11,
+        "acos_full_n_escalated": 2
+      },
+      "60pct": {
+        "max_price_change_pct": 0.6,
+        "naive_extreme_would_ship": 11,
+        "acos_full_n_rejected": 11,
+        "acos_full_n_escalated": 11
+      },
+      "80pct": {
+        "max_price_change_pct": 0.8,
+        "naive_extreme_would_ship": 11,
+        "acos_full_n_rejected": 11,
+        "acos_full_n_escalated": 11
+      }
+    },
+    "6": {
+      "25pct": {
+        "max_price_change_pct": 0.25,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 19
+      },
+      "35pct": {
+        "max_price_change_pct": 0.35,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 19
+      },
+      "45pct": {
+        "max_price_change_pct": 0.45,
+        "naive_extreme_would_ship": 15,
+        "acos_full_n_rejected": 15,
+        "acos_full_n_escalated": 4
+      },
+      "60pct": {
+        "max_price_change_pct": 0.6,
+        "naive_extreme_would_ship": 15,
+        "acos_full_n_rejected": 15,
+        "acos_full_n_escalated": 7
+      },
+      "80pct": {
+        "max_price_change_pct": 0.8,
+        "naive_extreme_would_ship": 15,
+        "acos_full_n_rejected": 15,
+        "acos_full_n_escalated": 7
+      }
+    },
+    "7": {
+      "25pct": {
+        "max_price_change_pct": 0.25,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 14
+      },
+      "35pct": {
+        "max_price_change_pct": 0.35,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 14
+      },
+      "45pct": {
+        "max_price_change_pct": 0.45,
+        "naive_extreme_would_ship": 11,
+        "acos_full_n_rejected": 11,
+        "acos_full_n_escalated": 3
+      },
+      "60pct": {
+        "max_price_change_pct": 0.6,
+        "naive_extreme_would_ship": 11,
+        "acos_full_n_rejected": 11,
+        "acos_full_n_escalated": 10
+      },
+      "80pct": {
+        "max_price_change_pct": 0.8,
+        "naive_extreme_would_ship": 11,
+        "acos_full_n_rejected": 11,
+        "acos_full_n_escalated": 10
+      }
+    },
+    "8": {
+      "25pct": {
+        "max_price_change_pct": 0.25,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 17
+      },
+      "35pct": {
+        "max_price_change_pct": 0.35,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 17
+      },
+      "45pct": {
+        "max_price_change_pct": 0.45,
+        "naive_extreme_would_ship": 15,
+        "acos_full_n_rejected": 15,
+        "acos_full_n_escalated": 2
+      },
+      "60pct": {
+        "max_price_change_pct": 0.6,
+        "naive_extreme_would_ship": 15,
+        "acos_full_n_rejected": 15,
+        "acos_full_n_escalated": 7
+      },
+      "80pct": {
+        "max_price_change_pct": 0.8,
+        "naive_extreme_would_ship": 15,
+        "acos_full_n_rejected": 15,
+        "acos_full_n_escalated": 7
+      }
+    },
+    "9": {
+      "25pct": {
+        "max_price_change_pct": 0.25,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 18
+      },
+      "35pct": {
+        "max_price_change_pct": 0.35,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 18
+      },
+      "45pct": {
+        "max_price_change_pct": 0.45,
+        "naive_extreme_would_ship": 13,
+        "acos_full_n_rejected": 13,
+        "acos_full_n_escalated": 5
+      },
+      "60pct": {
+        "max_price_change_pct": 0.6,
+        "naive_extreme_would_ship": 13,
+        "acos_full_n_rejected": 13,
+        "acos_full_n_escalated": 9
+      },
+      "80pct": {
+        "max_price_change_pct": 0.8,
+        "naive_extreme_would_ship": 13,
+        "acos_full_n_rejected": 13,
+        "acos_full_n_escalated": 9
+      }
+    },
+    "10": {
+      "25pct": {
+        "max_price_change_pct": 0.25,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 17
+      },
+      "35pct": {
+        "max_price_change_pct": 0.35,
+        "naive_extreme_would_ship": 0,
+        "acos_full_n_rejected": 0,
+        "acos_full_n_escalated": 17
+      },
+      "45pct": {
+        "max_price_change_pct": 0.45,
+        "naive_extreme_would_ship": 14,
+        "acos_full_n_rejected": 14,
+        "acos_full_n_escalated": 3
+      },
+      "60pct": {
+        "max_price_change_pct": 0.6,
+        "naive_extreme_would_ship": 14,
+        "acos_full_n_rejected": 14,
+        "acos_full_n_escalated": 8
+      },
+      "80pct": {
+        "max_price_change_pct": 0.8,
+        "naive_extreme_would_ship": 14,
+        "acos_full_n_rejected": 14,
+        "acos_full_n_escalated": 8
+      }
+    }
+  },
+  "summary": {
+    "45pct": {
+      "total_would_ship": 136,
+      "total_rejected": 136,
+      "all_caught": true,
+      "per_seed_violation_counts": [
+        15,
+        14,
+        14,
+        14,
+        11,
+        15,
+        11,
+        15,
+        13,
+        14
+      ],
+      "min": 11,
+      "max": 15,
+      "mean": 13.6
+    },
+    "60pct": {
+      "total_would_ship": 136,
+      "total_rejected": 136,
+      "all_caught": true,
+      "per_seed_violation_counts": [
+        15,
+        14,
+        14,
+        14,
+        11,
+        15,
+        11,
+        15,
+        13,
+        14
+      ],
+      "min": 11,
+      "max": 15,
+      "mean": 13.6
+    },
+    "80pct": {
+      "total_would_ship": 136,
+      "total_rejected": 136,
+      "all_caught": true,
+      "per_seed_violation_counts": [
+        15,
+        14,
+        14,
+        14,
+        11,
+        15,
+        11,
+        15,
+        13,
+        14
+      ],
+      "min": 11,
+      "max": 15,
+      "mean": 13.6
+    }
+  }
+}

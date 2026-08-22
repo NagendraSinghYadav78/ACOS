@@ -1,0 +1,223 @@
+{
+  "uci": {
+    "n_series": 20,
+    "n_folds_total": 260,
+    "by_horizon": {
+      "horizon_1w": {
+        "n_series": 19,
+        "n_folds_underlying": 258,
+        "avg_folds_per_series": 13.6,
+        "holt_median_of_series_means": 1.1168,
+        "naive_median_of_series_means": 1.2841,
+        "paired_test_series_level": {
+          "n_pairs": 19,
+          "median_diff_a_minus_b": -0.0931,
+          "bootstrap_ci_95": [
+            -0.1969,
+            -0.0292
+          ],
+          "wilcoxon_statistic": 59.0,
+          "wilcoxon_p_value": 0.1564,
+          "significant_at_0.05": false,
+          "matched_pairs_rank_biserial_r": -0.3789,
+          "n_a_better": 14,
+          "n_b_better": 5,
+          "n_tied": 0
+        }
+      },
+      "horizon_4w": {
+        "n_series": 19,
+        "n_folds_underlying": 260,
+        "avg_folds_per_series": 13.7,
+        "holt_median_of_series_means": 1.179,
+        "naive_median_of_series_means": 1.1409,
+        "paired_test_series_level": {
+          "n_pairs": 19,
+          "median_diff_a_minus_b": 0.1036,
+          "bootstrap_ci_95": [
+            0.0158,
+            0.1545
+          ],
+          "wilcoxon_statistic": 50.0,
+          "wilcoxon_p_value": 0.0728,
+          "significant_at_0.05": false,
+          "matched_pairs_rank_biserial_r": 0.4737,
+          "n_a_better": 5,
+          "n_b_better": 14,
+          "n_tied": 0
+        }
+      },
+      "horizon_8w": {
+        "n_series": 19,
+        "n_folds_underlying": 260,
+        "avg_folds_per_series": 13.7,
+        "holt_median_of_series_means": 1.5478,
+        "naive_median_of_series_means": 1.2098,
+        "paired_test_series_level": {
+          "n_pairs": 19,
+          "median_diff_a_minus_b": 0.3719,
+          "bootstrap_ci_95": [
+            0.1967,
+            0.6198
+          ],
+          "wilcoxon_statistic": 2.0,
+          "wilcoxon_p_value": 0.0,
+          "significant_at_0.05": true,
+          "matched_pairs_rank_biserial_r": 0.9789,
+          "n_a_better": 1,
+          "n_b_better": 18,
+          "n_tied": 0
+        }
+      }
+    }
+  },
+  "rossmann": {
+    "n_series": 20,
+    "n_folds_total": 1120,
+    "by_horizon": {
+      "horizon_1w": {
+        "n_series": 20,
+        "n_folds_underlying": 1108,
+        "avg_folds_per_series": 55.4,
+        "holt_median_of_series_means": 0.164,
+        "naive_median_of_series_means": 0.2049,
+        "paired_test_series_level": {
+          "n_pairs": 20,
+          "median_diff_a_minus_b": -0.0361,
+          "bootstrap_ci_95": [
+            -0.0447,
+            -0.0303
+          ],
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_p_value": 0.0,
+          "significant_at_0.05": true,
+          "matched_pairs_rank_biserial_r": -1.0,
+          "n_a_better": 20,
+          "n_b_better": 0,
+          "n_tied": 0
+        }
+      },
+      "horizon_4w": {
+        "n_series": 20,
+        "n_folds_underlying": 1109,
+        "avg_folds_per_series": 55.5,
+        "holt_median_of_series_means": 0.1478,
+        "naive_median_of_series_means": 0.1579,
+        "paired_test_series_level": {
+          "n_pairs": 20,
+          "median_diff_a_minus_b": -0.0058,
+          "bootstrap_ci_95": [
+            -0.0148,
+            -0.0007
+          ],
+          "wilcoxon_statistic": 42.0,
+          "wilcoxon_p_value": 0.0172,
+          "significant_at_0.05": true,
+          "matched_pairs_rank_biserial_r": -0.6,
+          "n_a_better": 14,
+          "n_b_better": 6,
+          "n_tied": 0
+        }
+      },
+      "horizon_8w": {
+        "n_series": 20,
+        "n_folds_underlying": 1111,
+        "avg_folds_per_series": 55.5,
+        "holt_median_of_series_means": 0.1782,
+        "naive_median_of_series_means": 0.1617,
+        "paired_test_series_level": {
+          "n_pairs": 20,
+          "median_diff_a_minus_b": 0.0166,
+          "bootstrap_ci_95": [
+            0.0047,
+            0.0237
+          ],
+          "wilcoxon_statistic": 13.0,
+          "wilcoxon_p_value": 0.0002,
+          "significant_at_0.05": true,
+          "matched_pairs_rank_biserial_r": 0.8762,
+          "n_a_better": 2,
+          "n_b_better": 18,
+          "n_tied": 0
+        }
+      }
+    }
+  },
+  "multiple_comparison_correction": {
+    "family_description": "6 confirmatory tests: {UCI, Rossmann} x {1-week, 4-week, 8-week horizon}, each testing Holt vs. naive persistence at the series-cluster level.",
+    "family": [
+      {
+        "dataset": "uci",
+        "horizon": 1,
+        "raw_p": 0.1564,
+        "effect_size_r": -0.3789,
+        "n_series": 19,
+        "holm_adjusted_p": 0.1564,
+        "bh_adjusted_p": 0.1564,
+        "significant_raw_0.05": false,
+        "significant_holm_0.05": false,
+        "significant_bh_0.05": false
+      },
+      {
+        "dataset": "uci",
+        "horizon": 4,
+        "raw_p": 0.0728,
+        "effect_size_r": 0.4737,
+        "n_series": 19,
+        "holm_adjusted_p": 0.1456,
+        "bh_adjusted_p": 0.0874,
+        "significant_raw_0.05": false,
+        "significant_holm_0.05": false,
+        "significant_bh_0.05": false
+      },
+      {
+        "dataset": "uci",
+        "horizon": 8,
+        "raw_p": 0.0,
+        "effect_size_r": 0.9789,
+        "n_series": 19,
+        "holm_adjusted_p": 0.0,
+        "bh_adjusted_p": 0.0,
+        "significant_raw_0.05": true,
+        "significant_holm_0.05": true,
+        "significant_bh_0.05": true
+      },
+      {
+        "dataset": "rossmann",
+        "horizon": 1,
+        "raw_p": 0.0,
+        "effect_size_r": -1.0,
+        "n_series": 20,
+        "holm_adjusted_p": 0.0,
+        "bh_adjusted_p": 0.0,
+        "significant_raw_0.05": true,
+        "significant_holm_0.05": true,
+        "significant_bh_0.05": true
+      },
+      {
+        "dataset": "rossmann",
+        "horizon": 4,
+        "raw_p": 0.0172,
+        "effect_size_r": -0.6,
+        "n_series": 20,
+        "holm_adjusted_p": 0.0516,
+        "bh_adjusted_p": 0.0258,
+        "significant_raw_0.05": true,
+        "significant_holm_0.05": false,
+        "significant_bh_0.05": true
+      },
+      {
+        "dataset": "rossmann",
+        "horizon": 8,
+        "raw_p": 0.0002,
+        "effect_size_r": 0.8762,
+        "n_series": 20,
+        "holm_adjusted_p": 0.0008,
+        "bh_adjusted_p": 0.0004,
+        "significant_raw_0.05": true,
+        "significant_holm_0.05": true,
+        "significant_bh_0.05": true
+      }
+    ]
+  }
+}
