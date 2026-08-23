@@ -80,22 +80,23 @@ def fig_fraud_confusion_matrix(results):
     e3 = results["E3_fraud_detection_quality"]
     matrix = np.array([[e3["true_positives"], e3["false_negatives"]],
                         [e3["false_positives"], e3["true_negatives"]]])
-    labels = ["Predicted Fraud", "Predicted Legitimate"]
+    labels = ["Predicted\nFraud", "Predicted\nLegitimate"]
     row_labels = ["Actual Fraud", "Actual Legitimate"]
 
-    fig, ax = plt.subplots(figsize=(4.5, 4))
+    fig, ax = plt.subplots(figsize=(6, 5.2))
     im = ax.imshow(matrix, cmap="Blues")
-    ax.set_xticks([0, 1]); ax.set_xticklabels(labels)
-    ax.set_yticks([0, 1]); ax.set_yticklabels(row_labels)
+    ax.set_xticks([0, 1]); ax.set_xticklabels(labels, fontsize=11)
+    ax.set_yticks([0, 1]); ax.set_yticklabels(row_labels, fontsize=11)
     for i in range(2):
         for j in range(2):
             ax.text(j, i, str(matrix[i, j]), ha="center", va="center",
                      color="white" if matrix[i, j] > matrix.max() / 2 else "black",
                      fontsize=14, fontweight="bold")
     ax.set_title(f"Fraud Screening Confusion Matrix (synthetic, seeded)\n"
-                 f"Precision={e3['precision']:.2f}  Recall={e3['recall']:.2f}  F1={e3['f1']:.2f}")
+                 f"Precision={e3['precision']:.2f}  Recall={e3['recall']:.2f}  F1={e3['f1']:.2f}",
+                 fontsize=12)
     fig.colorbar(im, fraction=0.046, pad=0.04)
-    fig.tight_layout()
+    fig.subplots_adjust(left=0.28, right=0.88, top=0.82, bottom=0.18)
     fig.savefig(FIG_DIR / "fig_fraud_confusion_matrix.png")
     plt.close(fig)
 

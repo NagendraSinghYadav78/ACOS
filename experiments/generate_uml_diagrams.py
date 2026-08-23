@@ -53,8 +53,8 @@ def component_diagram():
 
 # ---------------------------------------------------------------- SEQUENCE
 def sequence_diagram():
-    g = graphviz.Digraph("sequence", graph_attr={"rankdir": "LR", "fontname": "Helvetica"})
-    g.attr("node", shape="box", style="filled", fillcolor="#f1f5f9", fontname="Helvetica", fontsize="10")
+    g = graphviz.Digraph("sequence", graph_attr={"rankdir": "LR", "fontname": "Helvetica", "dpi": "200"})
+    g.attr("node", shape="box", style="filled", fillcolor="#f1f5f9", fontname="Helvetica", fontsize="16")
 
     participants = ["Client", "API", "Orchestrator", "Planner", "Agent(s)", "SharedMemory", "ConsensusResolver", "GovernanceAgent", "LongTermMemory"]
     with g.subgraph(name="cluster_lifeline") as c:
@@ -80,15 +80,16 @@ def sequence_diagram():
         ("API", "Client", "11: JSON response"),
     ]
     for i, (src, dst, label) in enumerate(steps):
-        g.edge(src, dst, label=f" {label}", fontsize="9")
+        g.edge(src, dst, label=f" {label}", fontsize="14")
 
     render(g, "fig_uml_sequence")
 
 
 # ---------------------------------------------------------------- CLASS
 def class_diagram():
-    g = graphviz.Digraph("class", graph_attr={"rankdir": "BT", "fontname": "Helvetica"})
-    g.attr("node", shape="record", fontname="Helvetica", fontsize="10", style="filled", fillcolor="#fefce8")
+    g = graphviz.Digraph("class", graph_attr={"rankdir": "BT", "fontname": "Helvetica", "fontsize": "16", "dpi": "200"})
+    g.attr("node", shape="record", fontname="Helvetica", fontsize="16", style="filled", fillcolor="#fefce8")
+    g.attr("edge", fontname="Helvetica", fontsize="14")
 
     g.node("BaseAgent", "{BaseAgent|+ name: str|+ event_bus: EventBus|+ shared_memory: SharedMemory|"
                         "+ long_term_memory: LongTermMemory|"

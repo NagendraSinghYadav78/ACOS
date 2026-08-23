@@ -127,13 +127,16 @@ def generate_figure(out: dict):
 
     fig_dir = Path(__file__).resolve().parents[1] / "figures"
     fig_dir.mkdir(exist_ok=True)
-    plt.rcParams.update({"figure.dpi": 300, "savefig.dpi": 300, "font.size": 10,
-                          "axes.spines.top": False, "axes.spines.right": False})
+    plt.rcParams.update({"figure.dpi": 300, "savefig.dpi": 300, "font.size": 18,
+                          "axes.spines.top": False, "axes.spines.right": False,
+                          "axes.titlesize": 18, "axes.labelsize": 18,
+                          "xtick.labelsize": 16, "ytick.labelsize": 16,
+                          "legend.fontsize": 16})
 
     datasets = [k for k in ["uci", "rossmann"] if k in out]
     if not datasets:
         return
-    fig, axes = plt.subplots(1, len(datasets), figsize=(6.5 * len(datasets), 4.5))
+    fig, axes = plt.subplots(1, len(datasets), figsize=(7.5 * len(datasets), 5.2))
     if len(datasets) == 1:
         axes = [axes]
 
@@ -153,7 +156,7 @@ def generate_figure(out: dict):
         ax.set_title(f"{title}\n({d['n_series_origin_folds_total']} origin-folds)")
         ax.legend()
 
-    fig.suptitle("Rolling-Origin Backtest: Median MAPE by Forecast Horizon", fontsize=12, y=1.03)
+    fig.suptitle("Rolling-Origin Backtest: Median MAPE by Forecast Horizon", fontsize=20, y=1.03)
     fig.tight_layout()
     fig.savefig(fig_dir / "fig_rolling_origin_backtest.png", bbox_inches="tight")
     plt.close(fig)
