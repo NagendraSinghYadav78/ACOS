@@ -1,0 +1,44 @@
+{
+  "n_transactions": 315,
+  "n_fraud": 36,
+  "results": {
+    "FraudRiskAgent_full_ensemble": {
+      "roc_auc": 0.9547,
+      "pr_auc": 0.7479
+    },
+    "amount_only_zscore": {
+      "roc_auc": 0.7181,
+      "pr_auc": 0.5311
+    },
+    "velocity_only": {
+      "roc_auc": 0.7047,
+      "pr_auc": 0.6828
+    },
+    "geo_only": {
+      "roc_auc": 0.7917,
+      "pr_auc": 0.8155
+    },
+    "ensemble_reimplementation_check": {
+      "roc_auc": 0.9547,
+      "pr_auc": 0.7479
+    },
+    "ablation_no_amount": {
+      "roc_auc": 0.9943,
+      "pr_auc": 0.9258
+    },
+    "ablation_no_velocity": {
+      "roc_auc": 0.7736,
+      "pr_auc": 0.5865
+    },
+    "ablation_no_geo": {
+      "roc_auc": 0.8988,
+      "pr_auc": 0.6872
+    },
+    "isolation_forest_unsupervised": {
+      "roc_auc": 0.9881,
+      "pr_auc": 0.8283
+    }
+  },
+  "reimplementation_sanity_check": "ensemble_reimplementation_check should closely match FraudRiskAgent_full_ensemble; a large gap would indicate the re-implementation here doesn't match the real agent's formula. AUC difference: 0.0000",
+  "interpretation": "Comparing FraudRiskAgent_full_ensemble against amount_only/velocity_only/geo_only shows whether combining signals earns its place over any single signal alone. The ablation_no_* rows show each signal's marginal contribution within the ensemble formula itself (holding the other two signals' weights fixed) -- the honest way to isolate contribution without re-deriving new weights per ablation, which would answer a different question (what is the best 2-signal ensemble) than the one asked (does the 3rd signal help the ACTUAL implemented ensemble). isolation_forest_unsupervised is a genuinely different, model-based method (not a hand-tuned rule combination) over the same three numeric features, included so the comparison is not limited to variants of the same rule-based approach."
+}
