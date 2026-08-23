@@ -1,0 +1,55 @@
+{
+  "dataset_seed": 42,
+  "configurations": {
+    "NAIVE_SEQUENTIAL": {
+      "latency_seconds": 0.00912,
+      "n_negative_margin_actions_that_would_ship": 0,
+      "n_extreme_price_change_actions_that_would_ship": 0,
+      "n_conflicts_resolved": 0,
+      "has_audit_trail": false,
+      "has_governance_ruling": false
+    },
+    "ACOS_NO_GOVERNANCE": {
+      "latency_seconds": 0.02359,
+      "n_negative_margin_actions_that_would_ship": 0,
+      "n_extreme_price_change_actions_that_would_ship": 0,
+      "n_conflicts_resolved": 12,
+      "has_audit_trail": true,
+      "has_governance_ruling": false
+    },
+    "ACOS_NO_RECONCILIATION": {
+      "latency_seconds": 0.03746,
+      "n_negative_margin_actions_that_would_ship": 0,
+      "n_rejected_by_governance": 0,
+      "n_escalated_by_governance": 17,
+      "n_conflicts_resolved": 0,
+      "has_audit_trail": true,
+      "has_governance_ruling": true,
+      "unreconciled_deviation_units_vs_full": 1127.2,
+      "n_skus_compared": 13
+    },
+    "ACOS_FULL": {
+      "latency_seconds": 0.03649,
+      "n_negative_margin_actions_that_would_ship": 0,
+      "n_rejected_by_governance": 0,
+      "n_escalated_by_governance": 17,
+      "n_conflicts_resolved": 12,
+      "has_audit_trail": true,
+      "has_governance_ruling": true
+    }
+  },
+  "naive_vs_full_unreconciled_deviation_units": 1127.2,
+  "naive_vs_full_n_skus_compared": 13,
+  "stress_test_wide_price_bound": {
+    "max_price_change_pct_used": 0.6,
+    "naive_extreme_price_actions_that_would_ship": 11,
+    "naive_negative_margin_actions_that_would_ship": 0,
+    "acos_full_n_rejected_by_governance": 11,
+    "acos_full_n_escalated_by_governance": 11,
+    "acos_full_extreme_actions_still_shipped": null
+  },
+  "governance_overhead_seconds": 0.0129,
+  "reconciliation_overhead_seconds": -0.00097,
+  "orchestration_overhead_vs_naive_seconds": 0.02737,
+  "interpretation": "On the default seed=42, default-bounds run, no pricing decision happens to violate a policy rule, so NAIVE_SEQUENTIAL and ACOS_FULL ship identical pricing decisions on THIS specific run -- we report this rather than only showing the more favorable stress-test variant below. The stress-test variant (wide price bound) does exercise the safety-catch: see stress_test_wide_price_bound. Independent of whether any single run happens to trigger a rule, ACOS_NO_RECONCILIATION's reorder plan deviates from ACOS_FULL's by 1127.2 total units ordered across 13 SKUs on the default run -- the concrete, quantified consequence of skipping price-inventory reconciliation, not just a percentage change. Governance and reconciliation overhead are both measured directly as latency deltas; reconciliation's measured overhead here is within measurement noise (negative in this run), consistent with it being an O(n) recomputation, not a claim that reconciliation is literally free or negative-cost."
+}
